@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+#__next :is(.min-h-screen) {
+  /* min-height: calc(100vh - 96px); */
+}
+
+/* custom nprogress bar style */
+/* node_modules/nprogress/nprogress.css */
+body #nprogress .bar {
+  background: red;
+}
