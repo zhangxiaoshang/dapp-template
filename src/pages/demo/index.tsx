@@ -8,6 +8,13 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import { useAccount, useContractRead } from "wagmi";
 import { useSnackbar } from "notistack";
 import { useIsMounted } from "@/hooks/use-is-mounted";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  Typography,
+  CardActions,
+} from "@mui/material";
 
 const demoPages = [
   {
@@ -110,6 +117,19 @@ export default function Demo() {
       <Button variant="contained" color="primary">
         Mui Button
       </Button>
+      <Button variant="contained" color="secondary">
+        Mui Button
+      </Button>
+      <Button variant="contained" color="success">
+        Mui Button
+      </Button>
+      <Button variant="contained" color="error">
+        Mui Button
+      </Button>
+
+      <Button variant="contained" color="primary" disabled={true}>
+        Mui Button(Disabled)
+      </Button>
 
       <h2 className="text-left">Mui with tailwind</h2>
       <Slider defaultValue={30} />
@@ -148,6 +168,23 @@ export default function Demo() {
       >
         Open
       </Button>
+
+      <h2 className="text-left">Card</h2>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Share</Button>
+          <Button size="small">Learn More</Button>
+        </CardActions>
+      </Card>
     </main>
   );
 }

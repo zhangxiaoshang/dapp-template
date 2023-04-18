@@ -35,3 +35,7 @@ body {
 body #nprogress .bar {
   background: red;
 }
+/* 
+.Mui-disabled {
+  background-color: brown !important;
+} */
